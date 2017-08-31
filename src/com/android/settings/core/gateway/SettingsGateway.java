@@ -140,6 +140,8 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 import com.android.settings.custom.ambient.history.AmbientPlayHistory;
 import com.android.settings.livedisplay.LiveDisplaySettings;
 
+import com.kcuf.settings.KCUFSettings;
+
 public class SettingsGateway {
 
     /**
@@ -265,8 +267,12 @@ public class SettingsGateway {
             DirectoryAccessDetails.class.getName(),
             ToggleBackupSettingFragment.class.getName(),
             PreviouslyConnectedDeviceDashboardFragment.class.getName(),
+<<<<<<< HEAD
             AmbientPlayHistory.class.getName(),
             LiveDisplaySettings.class.getName(),
+=======
+            KCUFSettings.class.getName()
+>>>>>>> b34506e... Add custom KCUFSettings dashboard
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -305,5 +311,6 @@ public class SettingsGateway {
             Settings.DeviceInfoSettingsActivity.class.getName(),
             Settings.EnterprisePrivacySettingsActivity.class.getName(),
             Settings.MyDeviceInfoActivity.class.getName(),
+            Settings.KCUFSettingsActivity.class.getName(),
     };
 }
