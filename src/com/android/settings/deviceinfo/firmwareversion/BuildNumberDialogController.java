@@ -57,8 +57,6 @@ public class BuildNumberDialogController {
             sb.append("\n");
             sb.append(RebellionOSVersion);
         }
-        sb.append("\n");
-        sb.append(DeviceModelPreferenceController.getDeviceModel());
         mDialog.setText(BUILD_NUMBER_VALUE_ID, sb.toString());
     }
 }
