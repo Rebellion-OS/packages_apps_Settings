@@ -101,7 +101,7 @@ public class BuildNumberPreferenceController extends AbstractPreferenceControlle
         }
     }
 
-    private String getPixelExperienceVersion(){
+    private String getRebellionOSVersion(){
         String buildDate = SystemProperties.get("ro.rebellion.build_date","");
         String buildType = SystemProperties.get("ro.rebellion.build_type","unofficial").toUpperCase();
         return buildDate.equals("") ? "" : "RebellionOS-" + buildDate + "-" + buildType;
