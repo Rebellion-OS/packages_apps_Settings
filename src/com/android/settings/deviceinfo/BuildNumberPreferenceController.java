@@ -88,10 +88,10 @@ public class BuildNumberPreferenceController extends AbstractPreferenceControlle
                 StringBuilder sb = new StringBuilder();
                 sb.append(BidiFormatter.getInstance().unicodeWrap(
                         TextUtils.isEmpty(Build.VENDOR.BUILD_NUMBER_OVERRIDE) ? Build.DISPLAY : Build.VENDOR.BUILD_NUMBER_OVERRIDE));
-                String pixelExperienceVersion = getPixelExperienceVersion();
-                if (!pixelExperienceVersion.equals("")){
+                String RebellionOSVersion = getRebellionOSVersion();
+                if (!RebellionOSVersion.equals("")){
                     sb.append("\n");
-                    sb.append(pixelExperienceVersion);
+                    sb.append(RebellionOSVersion);
                 }
                 preference.setSummary(sb.toString());
                 preference.setEnabled(true);
@@ -102,9 +102,9 @@ public class BuildNumberPreferenceController extends AbstractPreferenceControlle
     }
 
     private String getPixelExperienceVersion(){
-        String buildDate = SystemProperties.get("org.pixelexperience.build_date","");
-        String buildType = SystemProperties.get("org.pixelexperience.build_type","unofficial").toUpperCase();
-        return buildDate.equals("") ? "" : "PixelExperience-" + buildDate + "-" + buildType;
+        String buildDate = SystemProperties.get("ro.rebellion.build_date","");
+        String buildType = SystemProperties.get("ro.rebellion.build_type","unofficial").toUpperCase();
+        return buildDate.equals("") ? "" : "RebellionOS-" + buildDate + "-" + buildType;
     }
 
     @Override
